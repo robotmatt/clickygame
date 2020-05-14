@@ -5,7 +5,6 @@ import Image from "../components/Image";
 import planes from "../planes.json";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 class Main extends Component {
   state = {
     planes,
