@@ -1,10 +1,12 @@
-import React, { Component } from "react";
-import View from "./View";
+import React from "react";
+import { Navbar, Nav, Container, FormControl, Button } from "react-bootstrap";
 
-export default class extends Component {
-  state = {};
-  
-  render() {
-    return <View {...this.props} {...this.state} />;
-  }
-}
+const BottomNav = () => (
+	<Container>
+  		<Navbar expand="sm" variant="light" bg="light" fixed="bottom">
+    		<Navbar.Brand href="#">Cool Beans</Navbar.Brand>
+  		</Navbar>
+	</Container>
+);
+
+export default BottomNav;

@@ -1,19 +1,20 @@
 import React from "react";
 import { Navbar, Nav, Form, Button } from "react-bootstrap";
 
-function View() {
+function View(props, state) {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="#home">Clicky Game</Navbar.Brand>
-      <Nav className="mr-auto">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/">Pricing</Nav.Link>
-      </Nav>
-      <Form inline>
-        <Button variant="outline-info">Login</Button>
-      </Form>
-    </Navbar>
+    <div>
+      <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">Clicky Game</Navbar.Brand>
+        <Nav className="m-auto">
+          <Nav.Link href="/">{props.status}</Nav.Link>
+        </Nav>
+        <Nav className="ml-auto">
+          <Nav.Link href="/">Score: {props.score}</Nav.Link>
+          <Nav.Link href="/">Top Score: {props.topScore}</Nav.Link>
+        </Nav>
+      </Navbar>
+    </div>
   );
 }
 
