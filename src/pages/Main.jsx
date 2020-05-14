@@ -38,10 +38,13 @@ class Main extends Component {
         return;
       }
 
+      if (this.state.score > this.state.topScore){
+        this.setState({topScore: this.state.score})
+      }
       //reset everything
       this.setState({
         planes,
-        clickedIds,
+        clicked: clickedIds,
         score: clickedIds.length,
         status: "Correct Guess, pick again!",
       });
